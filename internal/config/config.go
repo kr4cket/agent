@@ -53,10 +53,10 @@ type LoggingConfig struct {
 
 func Load() (*Config, error) {
 	envPaths := []string{
-		".env",         // Текущая директория
-		"./.env",       // Явно текущая директория
-		"../.env",      // Родительская директория
-		"configs/.env", // В папке configs
+		".env",
+		"./.env",
+		"../.env",
+		"configs/.env",
 	}
 
 	var envLoaded bool
@@ -85,7 +85,7 @@ func Load() (*Config, error) {
 		OpenAI: OpenAIConfig{
 			APIKey:     getEnv("OPENAI_API_KEY", ""),
 			Model:      getEnv("OPENAI_MODEL", "gpt-4-turbo-preview"),
-			Timeout:    parseDuration(getEnv("OPENAI_TIMEOUT", "5m")), // 5 минут по умолчанию для vision-анализа
+			Timeout:    parseDuration(getEnv("OPENAI_TIMEOUT", "5m")),
 			MaxRetries: parseInt(getEnv("OPENAI_MAX_RETRIES", "3")),
 			BaseURL:    getEnv("OPENAI_BASE_URL", ""),
 		},
@@ -94,7 +94,7 @@ func Load() (*Config, error) {
 			Headless:          false, // жёсткое требование
 			Timeout:           parseDuration(getEnv("BROWSER_TIMEOUT", "30s")),
 			NavigationTimeout: parseDuration(getEnv("BROWSER_NAVIGATION_TIMEOUT", "60s")),
-			ActionTimeout:     parseDuration(getEnv("BROWSER_ACTION_TIMEOUT", "60s")), // 60 секунд для действий
+			ActionTimeout:     parseDuration(getEnv("BROWSER_ACTION_TIMEOUT", "60s")),
 			ViewportWidth:     parseInt(getEnv("BROWSER_VIEWPORT_WIDTH", "1920")),
 			ViewportHeight:    parseInt(getEnv("BROWSER_VIEWPORT_HEIGHT", "1080")),
 		},

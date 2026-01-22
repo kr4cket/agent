@@ -237,5 +237,4 @@ MAX_RETRIES=3
 - **`internal/subagents`**: Интерфейсы и реализации Planner, Analyst, Critic
 - **`internal/agent`**: AgentOptions, AgentController интерфейс
 
-Подробнее см. [docs/architecture-refactoring.md](architecture-refactoring.md)
 

@@ -253,7 +253,6 @@ make fmt
 
 Подробное описание архитектуры и рефакторинга см. в:
 - [docs/architecture.md](docs/architecture.md) - общая архитектура
-- [docs/architecture-refactoring.md](docs/architecture-refactoring.md) - детали рефакторинга и текущее состояние
 
 ### Ключевые компоненты
 
@@ -267,16 +266,7 @@ make fmt
 
 ## Ограничения
 
-- Работает только на Windows (можно адаптировать для Linux/Mac)
 - Требует установленный Chrome
 - Требует OpenAI API ключ
-- Видимый браузер (headless=false) - жёсткое требование
+- Видимый браузер (headless=false)
 - Не автоматизирует логин/капчу (пользователь должен быть уже залогинен)
-
-## Лицензия
-
-MIT
-
-## Автор
-
-Senior Go Engineer + AI Agent Architect
